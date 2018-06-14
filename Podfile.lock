@@ -2,17 +2,23 @@ PODS:
   - Charts (3.1.1):
     - Charts/Core (= 3.1.1)
   - Charts/Core (3.1.1)
+  - NVActivityIndicatorView (4.2.1):
+    - NVActivityIndicatorView/Presenter (= 4.2.1)
+  - NVActivityIndicatorView/Presenter (4.2.1)
 
 DEPENDENCIES:
   - Charts
+  - NVActivityIndicatorView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Charts
+    - NVActivityIndicatorView
 
 SPEC CHECKSUMS:
   Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
+  NVActivityIndicatorView: 8068ba3ad39cb44cbaab25d89ff2546b3f092681
 
-PODFILE CHECKSUM: f68084eb92ce47bfa10353dd0bb1d3622b989bca
+PODFILE CHECKSUM: 64f5cf3827fc6f151bea6dfbc121d88567f62e56
 
 COCOAPODS: 1.5.3

@@ -7,5 +7,6 @@ target 'FoodVision' do
 
   # Pods for FoodVision
   pod 'Charts'
+  pod 'NVActivityIndicatorView'
 
 end

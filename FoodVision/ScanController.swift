@@ -30,7 +30,7 @@ class ScanController: UIViewController, FrameExtractorDelegate {
     
     let iSee: UILabel = {
         let label = UILabel()
-        label.text = "Detecting:"
+        label.text = "Detecting: no food"
         label.font = UIFont(name: "Avenir-Medium", size: 12)
         label.textColor = .white
         return label
@@ -44,6 +44,8 @@ class ScanController: UIViewController, FrameExtractorDelegate {
     }()
     
     @objc func handleScan(){
+        if iSee.text != "Detecting: no food" {
+        
         let nutritionVC = NutritionController(collectionViewLayout: UICollectionViewFlowLayout())
         
         nutritionVC.navigationItem.titleView = UIImageView(image: #imageLiteral(resourceName: "FoodVision"))
@@ -63,10 +65,9 @@ class ScanController: UIViewController, FrameExtractorDelegate {
         
         textScan = trimmedString
         
-        
         navigationController?.pushViewController(nutritionVC, animated: true)
-        
-        
+            
+        }
     }
     
     @objc func handleInfo(){

@@ -17,6 +17,7 @@ class NutritionController: UICollectionViewController, UICollectionViewDelegateF
     let singleCellId = "singleCellId"
     let vitaminId = "vitaminId"
     let carbId = "carbId"
+    let footerId = "footerId"
     
     var scannedText = ""
     
@@ -39,13 +40,29 @@ class NutritionController: UICollectionViewController, UICollectionViewDelegateF
         collectionView?.register(SingleCell.self, forCellWithReuseIdentifier: singleCellId)
         collectionView?.register(VitaminCell.self, forCellWithReuseIdentifier: vitaminId)
         collectionView?.register(CarbCell.self, forCellWithReuseIdentifier: carbId)
-
+        
+        //collectionView?.register(UICollectionElementKindSectionFooter.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerId)
+        
+        collectionView?.register(Footer.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerId)
+        
         nutritionInfo.getFoodName {
             self.collectionView?.reloadSections(IndexSet(integer: 0))
             
         }
     }
     
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let view = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerId, for: indexPath) as! Footer
+        // configure footer view
+        return view
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return nutritionInfo.foods.isEmpty && nutritionInfo.pieTableInfo.isEmpty ? CGSize(width: 25, height: 25) : CGSize(width: 0, height: 0)
+    }
+    
+
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return nutritionInfo.name.count
     }
@@ -63,7 +80,7 @@ class NutritionController: UICollectionViewController, UICollectionViewDelegateF
         //let text: String = store.cells[indexPath.row]
         //let labelText: String = store.cellLabels[indexPath.row]
         
-        let info: String = nutritionInfo.name[indexPath.row]
+        var info: String = nutritionInfo.name[indexPath.row]
         
         if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! LabelCell
@@ -190,6 +207,12 @@ class NutritionController: UICollectionViewController, UICollectionViewDelegateF
         
     }
 
+    override func willMove(toParentViewController parent: UIViewController?) {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+    }
     
     fileprivate func setupNavBar(){
         navigationController?.navigationBar.isTranslucent = false

@@ -29,7 +29,7 @@ class LabelCell: UICollectionViewCell {
         setupChannelCell()
         
         addSubview(label)
-        label.anchor(top: nil, left: leftAnchor, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 14, paddingBottom: 0, paddingRight: 0, width: 240, height: 33)
+        label.anchor(top: nil, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 0, paddingLeft: 14, paddingBottom: 0, paddingRight: 14, width: 0, height: 33)
         label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
     }
     

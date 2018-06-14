@@ -25,7 +25,7 @@ class InfoController: UIViewController {
     let dismissButton: UIButton = {
         let button = UIButton(type: .system)
         
-        let attributedTitle = NSMutableAttributedString(string: "dismiss", attributes: [NSAttributedStringKey.font: UIFont(name: "Avenir-Book", size: 18), NSAttributedStringKey.foregroundColor: UIColor.white])
+        let attributedTitle = NSMutableAttributedString(string: "dismiss", attributes: [NSAttributedStringKey.font: UIFont(name: "Avenir-Book", size: 18) as Any, NSAttributedStringKey.foregroundColor: UIColor.white])
         
         button.setAttributedTitle(attributedTitle, for: .normal)
         

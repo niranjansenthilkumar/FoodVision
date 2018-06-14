@@ -29,6 +29,7 @@
 		8A11554320CAF3BD003039F2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A11554220CAF3BD003039F2 /* APIClient.swift */; };
 		8A21302920CAF77700F9BB3F /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A21302820CAF77700F9BB3F /* DataStore.swift */; };
 		8A21304B20CF7A4A00F9BB3F /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A21304A20CF7A4A00F9BB3F /* InfoController.swift */; };
+		8A6F92D020D17877007411DB /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6F92CF20D17877007411DB /* Footer.swift */; };
 		A281EA16715EF2625E60C34F /* Pods_FoodVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45455CF55ABC4D217C21463 /* Pods_FoodVision.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		8A11554220CAF3BD003039F2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		8A21302820CAF77700F9BB3F /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		8A21304A20CF7A4A00F9BB3F /* InfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
+		8A6F92CF20D17877007411DB /* Footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footer.swift; sourceTree = "<group>"; };
 		A45455CF55ABC4D217C21463 /* Pods_FoodVision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodVision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 				8A11553020C9AB7D003039F2 /* SingleCell.swift */,
 				8A11553220C9ACB6003039F2 /* VitaminCell.swift */,
 				8A11553520C9C671003039F2 /* CustomTableCell.swift */,
+				8A6F92CF20D17877007411DB /* Footer.swift */,
 				8A11553C20C9E092003039F2 /* BreakdownCell.swift */,
 			);
 			path = Cells;
@@ -240,10 +243,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FoodVision/Pods-FoodVision-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -289,6 +294,7 @@
 				8A21304B20CF7A4A00F9BB3F /* InfoController.swift in Sources */,
 				8A11552D20C9A800003039F2 /* PieCell.swift in Sources */,
 				8A11553320C9ACB6003039F2 /* VitaminCell.swift in Sources */,
+				8A6F92D020D17877007411DB /* Footer.swift in Sources */,
 				8A11553D20C9E092003039F2 /* BreakdownCell.swift in Sources */,
 				8A11552B20C9A586003039F2 /* CaloriesCell.swift in Sources */,
 				8A11553620C9C671003039F2 /* CustomTableCell.swift in Sources */,
